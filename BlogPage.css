@@ -1,0 +1,418 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(135deg, #003366, #00509d);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.header-2{
+    width: 80%;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* Nepal Flag Watermark */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 180px;
+    height: 180px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.15;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    color: #003366;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+/* ================= MAIN LAYOUT ================= */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* ================= CONTENT ================= */
+
+.contentbox h2 {
+    margin-bottom: 15px;
+}
+
+.post {
+    margin-top: 10px;
+}
+
+.post-box {
+    display: block;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.post-box:hover {
+    transform: translateY(-4px);
+}
+
+.post-content h3 {
+    color: #067733;
+    margin-bottom: 8px;
+}
+
+.post-content p {
+    font-size: 14px;
+    color: #555;
+    width: 80%;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 60%;
+    padding: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-card::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -10px;
+    width: 120px;
+    height: 120px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.06;
+}
+
+.contact-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.email {
+    font-weight: 600;
+    color: #00509d;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background: #003366;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #00509d;
+}
+
+/* ================= IMAGE GALLERY ================= */
+.emotionalphot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.emotionalphot a {
+    width: 30%;
+    margin: 1.5%;
+    display: block;
+}
+
+.emotionalphot a img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.emotionalphot a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 22px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+.post-content h3 {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+/* ================= MOBILE ================= */
+/* ================= IMPROVED MOBILE RESPONSIVE ================= */
+@media (max-width: 992px) {
+
+    main {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contentbox,
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .post-content p {
+        width: 100%; /* FIXED 80% width issue */
+        padding: 8px 0;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .header-2 {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+/* ================= MOBILE TABLET ================= */
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    .top-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 14px;
+    }
+
+    .post-content h3 {
+        width: 100%;
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .sidebar {
+        padding: 10px 0;
+    }
+
+    .contact-card {
+        padding: 20px 15px;
+    }
+
+    .emotionalphot {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .emotionalphot a {
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    .emotionalphot a img {
+        border-radius: 12px;
+    }
+
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ================= SMALL MOBILE DEVICES ================= */
+@media (max-width: 480px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+    nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* force single line */
+    overflow-x: auto;  /* allow scroll if very small screen */
+}
+
+
+    nav a {
+        display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    white-space: nowrap; /* prevent breaking */
+    }
+
+    .post-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .post-content h3 {
+        font-size: 17px;
+    }
+
+    .contact-card h3 {
+        font-size: 18px;
+    }
+
+    .contact-card p {
+        font-size: 13px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+/* ================= EXTRA SMALL DEVICES (320px) ================= */
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .post-content p {
+        font-size: 13px;
+    }
+
+    .post-content h3 {
+        font-size: 16px;
+    }
+
+}
